@@ -54,7 +54,7 @@ def upload_file():
 
         prediction = model.predict(img_flatten)
         
-        result = "Sağlıklı" if prediction[0] == 0 else "Tümörlü"
+        result = "Tümörlü" if prediction[0] == 0 else "Sağlıklı"
         
         return render_template('result.html', result=result)  
 
